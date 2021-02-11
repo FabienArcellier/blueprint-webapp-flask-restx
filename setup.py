@@ -10,7 +10,7 @@ setup(
     license='MIT',
     long_description=open('README.md').read(),
     install_requires=[
-        'flask',
+        'flask<2.0.0',
         'flask-restx',
         'gunicorn',
         'honcho'
