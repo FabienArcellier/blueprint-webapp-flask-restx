@@ -2,10 +2,9 @@
 
 ## Motivation
 
-blueprint to implement a flask application. This application may be used to:
+blueprint to implement a REST API application. This application may be used to:
 
-* build MVC application as multipage web application
-* build API application
+* build API application with open api portal
 * ...
 
 ## Getting started
@@ -30,7 +29,7 @@ make start
 You can find the latest version to ...
 
 ```bash
-git clone git@github.com:FabienArcellier/blueprint-webapp-flask.git
+git clone https://github.com/FabienArcellier/blueprint-webapp-flask-restx.git
 ```
 
 ## Usage
