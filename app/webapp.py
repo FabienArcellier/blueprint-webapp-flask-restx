@@ -1,16 +1,17 @@
+
 # pylint: disable=invalid-name
 
 from flask import Flask
-from flask import render_template
-
+from flask_restx import Api, Resource
 
 app = Flask(__name__)
+api = Api(app)
 
 
-@app.route("/")
-def hello():
-    name = 'Fabien'
-    return render_template('hello.html', name=name)
+@api.route('/hello')
+class HelloWorld(Resource):
+    def get(self):
+        return {'hello': 'fabien'}
 
 
 if __name__ == "__main__":
