@@ -10,7 +10,7 @@ class WebappTest(unittest.TestCase):
     def test_root_should_display_hello_world(self):
         # Assign
         # Acts
-        rv = self.client.get('/hello')
+        rv = self.client.get('/api/hello')
 
         # Assert
         self.assertEqual({'hello': 'fabien'}, rv.json)

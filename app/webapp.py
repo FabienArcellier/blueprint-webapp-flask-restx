@@ -1,17 +1,10 @@
-
 # pylint: disable=invalid-name
 
 from flask import Flask
-from flask_restx import Api, Resource
+from app.apis import api
 
 app = Flask(__name__)
-api = Api(app)
-
-
-@api.route('/hello')
-class HelloWorld(Resource):
-    def get(self):
-        return {'hello': 'fabien'}
+api.init_app(app)
 
 
 if __name__ == "__main__":
