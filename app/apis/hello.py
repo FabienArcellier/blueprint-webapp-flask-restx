@@ -15,11 +15,14 @@ repository = MemoryHelloRepository()
 
 @api.route('')
 class Hello(Resource):
+
+    @api.response(200, 'Success', model)
     def get(self):
         _hello = repository.get()
         return marshal(_hello, model)
 
     @api.expect(model)
+    @api.response(200, 'Success', model)
     def put(self):
         _hello = api.payload
         repository.save(_hello)

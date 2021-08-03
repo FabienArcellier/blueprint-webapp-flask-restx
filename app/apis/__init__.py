@@ -6,7 +6,8 @@ api = Api(
     title='api',
     version='1.0',
     description='',
-    prefix='/api'
+    prefix='/api',
+    doc='/api'
 )
 
 api.add_namespace(hello)
